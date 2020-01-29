@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">发布通知</string>
+    <string name="channel_critical">重大事件</string>
+    <string name="channel_importance">重要性事件</string>
+    <string name="channel_default">一般事件</string>
+    <string name="channel_low">低级事件</string>
+    <string name="channel_media">中级事件</string>
+</resources>

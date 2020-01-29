@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btn_simple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="简单通知，低级事件"
+        android:textAllCaps="false"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/btn_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="带Action按钮通知，一般事件"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btn_simple"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/btn_remote_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="带快速回复功能通知，重大性事件"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btn_action"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/btn_big_picture_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="大图效果通知"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btn_remote_input"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/btn_big_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="多文字效果通知，一般事件"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btn_big_picture_style"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/btn_inbox_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="信箱效果通知，一般事件"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btn_big_text_style"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/btn_media_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="媒体效果通知，中级事件"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btn_inbox_style"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/btn_messaging_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="信息效果通知，一般事件"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btn_media_style"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/btn_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="带进度条通知，低级事件"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btn_messaging_style"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/btn_custom_heads_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义抬头通知，重大事件"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btn_progress"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/btn_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义顶部提醒视图通知，中级事件"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btn_custom_heads_up"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/btn_clear_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清除所有通知"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btn_custom"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
