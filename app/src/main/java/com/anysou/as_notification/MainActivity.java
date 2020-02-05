@@ -1,5 +1,6 @@
 package com.anysou.as_notification;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,8 +10,14 @@ import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
+import android.widget.Toast;
+
 
 import static com.anysou.as_notification.NotificationService.ACTION_SEND_PROGRESS_NOTIFICATION;
 
@@ -18,6 +25,8 @@ import static com.anysou.as_notification.NotificationService.ACTION_SEND_PROGRES
  * https://www.jianshu.com/p/6aec3656e274
  *
  * 注意：手机 设置 通知显示设置  选择 原生样式
+ *
+ * 实现 应用角标（未实现，待研究） https://www.cnblogs.com/whycxb/p/10081963.html
  */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private final static String TAG = "NotificationDemo";
@@ -41,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);  //隐藏标题栏
         setContentView(R.layout.activity_main);
 
         mContext = this;
@@ -72,7 +82,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mCustomHeadsUp.setOnClickListener(this);
         mCustom.setOnClickListener(this);
         mClearAll.setOnClickListener(this);
-
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -129,5 +138,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             default:
                 //do nothing
         }
+    }
+
+
+    // 菜单
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.add_item:
+                Toast.makeText(this, "You clicked Add", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.remove_item:
+                Toast.makeText(this, "You clicked Remove", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+        }
+        return true;
     }
 }

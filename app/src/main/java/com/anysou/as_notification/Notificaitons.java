@@ -14,6 +14,7 @@ import android.widget.RemoteViews;
 
 import androidx.annotation.RequiresApi;
 
+
 /**
  * 封装了一个单实例来发送通知，里面定义了发送各种通知的方法。
  */
@@ -153,6 +154,8 @@ public class Notificaitons {
         nb.setActions(yesActionBuilder,noActionBuilder);
         //发送通知
         nm.notify(NOTIFICATION_ACTION,nb.build());
+
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
